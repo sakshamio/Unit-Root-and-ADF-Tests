@@ -1,0 +1,8 @@
+library(readr)
+EICHER <- read_csv("PATH TO CSV FILE")
+View(EICHER)
+library(zoo)
+ts1 <- zoo(EICHER$Close,EICHER$Period)
+plot(ts1)
+library("tseries", lib.loc="~/R/win-library/3.4")
+adf.test(ts1)
